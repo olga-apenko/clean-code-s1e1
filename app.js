@@ -8,7 +8,7 @@
 // Event handling, user interaction is what starts the code execution.
 
 var taskInput = document.getElementById("to-do-form__new-task"); //Add a new task.
-var addButton = document.getElementsByClassName("to-do-form__button")[0]; //first button
+var addButton = document.getElementsByTagName("button")[0]; //first button
 var incompleteTaskHolder = document.getElementById(
   "to-do-form__incomplete-tasks"
 ); //ul of #incompleteTasks
@@ -35,8 +35,10 @@ var createNewTaskElement = function (taskString) {
 
   label.innerText = taskString;
   label.className = "to-do-form__task";
+  checkBox.className = "to-do-form__input";
 
   //Each elements, needs appending
+  listItem.className = "to-do-form__item";
   checkBox.type = "checkbox";
   editInput.type = "text";
   editInput.className = "to-do-form__task";
@@ -74,14 +76,14 @@ var addTask = function () {
 
 var editTask = function () {
   console.log("Edit Task...");
-  console.log("Change 'edit' to 'save'");
+  console.log("Change 'to-do-form__button_edit' to 'to-do-form__button_save'");
 
   var listItem = this.parentNode;
 
-  var editInput = listItem.querySelector(".to-do-form__input-text");
+  var editInput = listItem.querySelector(".to-do-form__input[type=text]");
   var label = listItem.querySelector("label");
   var editBtn = listItem.querySelector(".to-do-form__button_edit");
-  var containsClass = listItem.classList.contains("to-do-form__edit-mode");
+  var containsClass = listItem.classList.contains("to-do-form__button_edit");
   //If class of the parent is .editmode
   if (containsClass) {
     //switch to .editmode
@@ -94,7 +96,7 @@ var editTask = function () {
   }
 
   //toggle .editmode on the parent.
-  listItem.classList.toggle("to-do-form__edit-mode");
+  listItem.classList.toggle("to-do-form__button_edit");
 };
 
 //Delete task.
@@ -142,8 +144,8 @@ var bindTaskEvents = function (taskListItem, checkBoxEventHandler) {
   console.log("bind list item events");
   //select ListItems children
   var checkBox = taskListItem.querySelector("input[type=checkbox]");
-  var editButton = taskListItem.querySelector(".to-do-form__button.edit");
-  var deleteButton = taskListItem.querySelector(".to-do-form__button.delete");
+  var editButton = taskListItem.querySelector(".to-do-form__button_edit");
+  var deleteButton = taskListItem.querySelector(".to-do-form__button_delete");
 
   //Bind editTask to edit button.
   editButton.onclick = editTask;

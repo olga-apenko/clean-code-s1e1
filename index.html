@@ -25,16 +25,16 @@
       </section>
       <section class="to-do-form">
         <h3 class="heading-form">Add Item</h3>
-        <form class="to-do-form__task-row-wrapper">
+        <div class="to-do-form__task-row-wrapper" onsubmit="return false;">
           <input
             id="to-do-form__new-task"
             class="to-do-form__input to-do-form__task"
             type="text"
           />
           <button class="to-do-form__button">Add</button>
-        </form>
+        </div>
         <h3 class="heading-form">Todo</h3>
-        <form>
+        <div>
           <ul id="to-do-form__incomplete-tasks" class="to-do-form__list">
             <li class="to-do-form__item">
               <input class="to-do-form__input" type="checkbox" />
@@ -63,7 +63,7 @@
               </button>
             </li>
           </ul>
-        </form>
+        </div>
         <h3 class="heading-form">Completed</h3>
         <ul id="to-do-form__completed-tasks" class="to-do-form__list">
           <li class="to-do-form__item">

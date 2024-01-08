@@ -40,6 +40,7 @@
 
 .to-do-form__task-row-wrapper {
     display: flex;
+    margin-top: 30px;
 }
 
 ul {
@@ -164,6 +165,6 @@ label[for="to-do-form__new-task"] {
     width: 224px;
 }
 
-li.to-do-form__edit-mode label {
+.to-do-form__item.to-do-form__edit-mode label {
     display: none;
 }
