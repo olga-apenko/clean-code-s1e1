@@ -4,15 +4,18 @@
     color: #333;
     font-family: Lato, sans-serif;
 }
+
 .matrix {
     width: 500px;
     margin: 0 auto;
     display: block;
     text-align: right;
 }
+
 .matrix img {
     width: 100%;
 }
+
 .matrix__info {
     font-family: fantasy, cursive;
 }
@@ -21,32 +24,38 @@
 .matrix { text-align: center;
 }
 }
+
 .to-do-form {
     display: block;
     width: 500px;
     margin: 0 auto 0;
 }
+
 .to-do-form__task {
     width: 56%;
     display: inline-block;
     flex-grow: 1
 }
+
 .to-do-form__task-row-wrapper {
     display: flex;
-
 }
+
 ul {
     margin:0;
     padding: 0px;
 }
+
 li,
 h3 {
     list-style:none;
 }
+
 input,
 button{
     outline:none;
 }
+
 .to-do-form__button {
     background: none;
     border: 0px;
@@ -56,9 +65,11 @@ button{
     font-family: Lato, sans-serif;
     cursor: pointer;
 }
+
 .to-do-form__button:hover {
     color: #3a3a3a;
 }
+
 /* Heading */
 .heading-form {
     color: #333;
@@ -69,6 +80,7 @@ button{
     margin: 0;
     text-transform: uppercase;
 }
+
 .to-do-form__input[type="text"] {
     margin: 0;
     font-size: 18px;
@@ -81,6 +93,7 @@ button{
     font-family: Lato, sans-serif;
     color: #888;
 }
+
 .to-do-form__input[type="text"]:focus {
     color: #333;
 }
@@ -90,6 +103,7 @@ label[for="to-do-form__new-task"] {
     display: block;
     margin: 0 0 20px;
 }
+
 .to-do-form__input#to-do-form__new-task {
     width: 318px;
 }
@@ -99,32 +113,36 @@ label[for="to-do-form__new-task"] {
     overflow: hidden;
     padding: 20px 0;
     border-bottom: 1px solid #eee;
-
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-li > * {
+
+.to-do-form__item > * {
     vertical-align: middle;
-}to-do-form__item
+}
 
 .to-do-form__input[type="checkbox"] {
     margin: 0 10px;
 }
+
 .to-do-form__item > label {
     padding-left: 10px;
     box-sizing: border-box;
     font-size: 18px;
     width: 226px;
 }
+
 .to-do-form__item >    .to-do-form__input[type="text"] {
     width: 226px
 }
+
 .to-do-form__button.to-do-form__button_delete img {
     height: 2em;
     transform: rotateZ(45deg);
     transition: transform 200ms ease-in;
 }
+
 .to-do-form__button.to-do-form__button_delete img:hover {
     transform: rotateZ(0);
 }
