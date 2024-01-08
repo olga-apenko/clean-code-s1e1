@@ -82,7 +82,7 @@ var editTask=function(){
 
     var listItem=this.parentNode;
 
-    var editInput=listItem.querySelector("input[type=text]");
+    var editInput=listItem.querySelector(".to-do-form__input-text");
     var label=listItem.querySelector("label");
     var editBtn=listItem.querySelector(".to-do-form__button_edit");
     var containsClass=listItem.classList.contains("to-do-form__edit-mode");

@@ -33,6 +33,7 @@
 }
 .to-do-form__task-row-wrapper {
     display: flex;
+
 }
 ul {
     margin:0;
@@ -43,7 +44,7 @@ h3 {
     list-style:none;
 }
 input,
-.to-do-form__button{
+button{
     outline:none;
 }
 .to-do-form__button {
@@ -59,8 +60,7 @@ input,
     color: #3a3a3a;
 }
 /* Heading */
-h3,
-label[for="to-do-form__new-task"] {
+.heading-form {
     color: #333;
     font-weight: 700;
     font-size: 15px;
@@ -69,7 +69,7 @@ label[for="to-do-form__new-task"] {
     margin: 0;
     text-transform: uppercase;
 }
-input[type="text"] {
+.to-do-form__input[type="text"] {
     margin: 0;
     font-size: 18px;
     line-height: 18px;
@@ -81,7 +81,7 @@ input[type="text"] {
     font-family: Lato, sans-serif;
     color: #888;
 }
-input[type="text"]:focus {
+.to-do-form__input[type="text"]:focus {
     color: #333;
 }
 
@@ -90,12 +90,12 @@ label[for="to-do-form__new-task"] {
     display: block;
     margin: 0 0 20px;
 }
-input#to-do-form__new-task {
+.to-do-form__input#to-do-form__new-task {
     width: 318px;
 }
 
 /* Task list */
-li {
+.to-do-form__item {
     overflow: hidden;
     padding: 20px 0;
     border-bottom: 1px solid #eee;
@@ -106,18 +106,18 @@ li {
 }
 li > * {
     vertical-align: middle;
-}
+}to-do-form__item
 
-li > input[type="checkbox"] {
+.to-do-form__input[type="checkbox"] {
     margin: 0 10px;
 }
-li > label {
+.to-do-form__item > label {
     padding-left: 10px;
     box-sizing: border-box;
     font-size: 18px;
     width: 226px;
 }
-li >    input[type="text"] {
+.to-do-form__item >    .to-do-form__input[type="text"] {
     width: 226px
 }
 .to-do-form__button.to-do-form__button_delete img {
@@ -130,21 +130,21 @@ li >    input[type="text"] {
 }
 
 /* Completed */
-ul#to-do-form__completed-tasks label {
+#to-do-form__completed-tasks label {
     text-decoration: line-through
     color: #888;
 }
 
 /* Edit Task */
-ul li input[type=text] {
+.to-do-form__item .to-do-form__input[type=text] {
     display:none
 }
 
-ul li.to-do-form__edit-mode input[type=text] {
+.to-do-form__item.to-do-form__edit-mode .to-do-form__input[type=text] {
     display:inline-block;
     width:224px
 }
 
-ul li.to-do-form__edit-mode label {
+li.to-do-form__edit-mode label {
     display:none;
 }

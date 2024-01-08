@@ -8,54 +8,54 @@
     <link rel="stylesheet" href="style.css" media="screen" charset="utf-8">
 </head>
 <body>
-    <div class="container">
-        <div class="matrix">
+    <main class="container">
+        <section class="matrix">
            <img src="./eisenhower-matrix.jpg">
            <a class="matrix__info" href="https://goal-life.com/page/method/matrix-eisenhower">Want more details?</a>
-        </div>
-        <div class="to-do-form">
-          <p id="to-do-form__add-item">
-              <label for="to-do-form__new-task">Add Item</label>
-              <div class="to-do-form__task-row-wrapper">
-                  <input id="to-do-form__new-task" class="to-do-form__task" type="text">
-                  <button class="to-do-form__button">Add</button>
-              </div>
-          </p>
-        <h3>Todo</h3>
-        <ul id="to-do-form__incomplete-tasks">
-          <li>
-            <input type="checkbox">
+        </section>
+        <section class="to-do-form">
+          <h3 class="heading-form">Add Item</h3>
+          <form class="to-do-form__task-row-wrapper">
+            <input id="to-do-form__new-task" class="to-do-form__input to-do-form__task" type="text">
+            <button class="to-do-form__button">Add</button>
+          </form>
+        <h3 class="heading-form">Todo</h3>
+        <form>
+        <ul id="to-do-form__incomplete-tasks" class="to-do-form__list">
+          <li class="to-do-form__item">
+            <input class="to-do-form__input" type="checkbox">
             <label class="to-do-form__task">Pay Bills</label>
-            <input type="text" class="to-do-form__task">
+            <input type="text" class="to-do-form__input to-do-form__task">
             <button class="to-do-form__button to-do-form__button_edit">Edit</button>
             <button class="to-do-form__button to-do-form__button_delete">
               <img src="./remove.svg">
             </button>
           </li>
-          <li class="to-do-form__edit-mode">
-            <input type="checkbox">
+          <li class="to-do-form__item to-do-form__edit-mode">
+            <input type="checkbox" class="to-do-form__input">
             <label class="to-do-form__task">Go Shopping</label>
-            <input type="text" value="Go Shopping" class="to-do-form__task">
+            <input type="text" value="Go Shopping" class="to-do-form__input to-do-form__task">
             <button class="to-do-form__button to-do-form__button_edit">Save</button>
             <button class="to-do-form__button to-do-form__button_delete">
               <img src="./remove.svg">
             </button>
           </li>
         </ul>
-        <h3>Completed</h3>
-        <ul id="to-do-form__completed-tasks">
-          <li>
-              <input type="checkbox" checked>
+      </form>
+        <h3 class="heading-form">Completed</h3>
+        <ul id="to-do-form__completed-tasks" class="to-do-form__list">
+          <li class="to-do-form__item">
+              <input type="checkbox" class="to-do-form__input" checked>
               <label class="to-do-form__task">See the Doctor</label>
-              <input type="text" class="to-do-form__task">
+              <input type="text" class="to-do-form__input to-do-form__task">
               <button class="to-do-form__button to-do-form__button_edit">Edit</button>
               <button class="to-do-form__button to-do-form__button_delete">
                   <img src="./remove.svg">
               </button>
           </li>
         </ul>
-       </div>
-    </div>
+        </section>
+    </main>
    <script src="app.js"></script>
 </body>
 </html>
