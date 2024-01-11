@@ -35,14 +35,13 @@ var createNewTaskElement = function (taskString) {
 
   label.innerText = taskString;
 
-
   //Each elements, needs appending
-  listItem.className = "to-do-form__item";
+  listItem.className = "to-do-form__item ";
   checkBox.type = "checkbox";
   checkBox.className = "to-do-form__input";
   editInput.type = "text";
-  editInput.className = "to-do-form__input to-do-form__task"
-
+  editInput.className = "to-do-form__input to-do-form__task";
+  label.className = "to-do-form__task";
 
   editButton.innerText = "Edit"; //innerText encodes special characters, HTML does not.
   editButton.className = "to-do-form__button to-do-form__button_edit";
@@ -81,10 +80,10 @@ var editTask = function () {
 
   var listItem = this.parentNode;
 
-  var editInput = listItem.querySelector(".to-do-form__input[type=text]");
+  var editInput = listItem.querySelector("input[type=text]");
   var label = listItem.querySelector("label");
   var editBtn = listItem.querySelector(".to-do-form__button_edit");
-  var containsClass = listItem.classList.contains("to-do-form__button_edit");
+  var containsClass = listItem.classList.contains("to-do-form__edit-mode");
   //If class of the parent is .editmode
   if (containsClass) {
     //switch to .editmode
@@ -97,7 +96,7 @@ var editTask = function () {
   }
 
   //toggle .editmode on the parent.
-  listItem.classList.toggle("to-do-form__button_edit");
+  listItem.classList.toggle("to-do-form__edit-mode");
 };
 
 //Delete task.
